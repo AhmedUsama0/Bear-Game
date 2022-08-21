@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    #up,#left,#down,#right{
+    margin:20px;
+    width: 80px;
+    height: 30px;
+    background-color:brown;
+    color:#FFF;
+    border:none;
+    cursor: pointer;
+    font-size:20px;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+}
+#up:hover,#left:hover,#down:hover,#right:hover{
+    background-color: darkgreen;
+}
+
+.game-container #new {
+    position: absolute;
+    top:50%;
+    display: block;
+    left:35%;
+    z-index: 2;
+    width: 200px;
+    height: 50px;
+    border: none;
+    text-align: center;
+    background-color: orangered;
+    color:#FFF;
+    font-weight: bold;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 20px;
+    transition: all 0.3s ease-in-out;
+    animation-name: test;
+    animation-duration: 4s;
+    cursor: pointer;
+}
+
+#new:hover{
+    background-color: rgb(144, 174, 238);
+}
+
+
+
+
+
+
+#yes, #close {
+    width:100px;
+    height: 30px;
+    position: relative;
+    left:80px;
+    margin:0 10px;
+    background-color: orangered;
+    color:#FFF;
+    border:none;
+    font-weight: bold;
+    font-size: 15px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+}
+#yes:hover,#close:hover{
+    background-color: rgb(144, 174, 238);
+    transition: all 0.5s ease-in-out;
+}
+canvas{
+    background-image: url(forest.gif);
+    background-repeat: no-repeat;
+    background-size:100% 100%;
+    display:block;
+    margin: 0 auto;
+    animation-name: test;
+    animation-duration: 5s;
+    
+    
+}
+.Time{
+    display: none;
+    width: 400px;
+    padding:10px;
+    background-color: lightpink;
+    position: absolute;
+   left:10%;
+   right: 0;
+   top:50%;
+    
+}
+
+.game-container{
+    position: relative;
+    width:fit-content;
+    margin:0 auto;
+}
+
+#counter {
+    position:absolute;
+    color:#000;
+    left:45%;
+    top:-2%;
+    right: 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 20px;
+    font-weight: bold;
+}
+.Time p {
+    font-size: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+#start{
+    position:absolute;
+    top:10%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color:#FFF;
+    background-color: orangered;
+    border:none;
+    padding:10px;
+    font-weight: bold;
+    font-size:20px;
+    display: none;
+    cursor:pointer;
+    transition: all 0.5s ease-in-out;
+    animation-name: test;
+    animation-duration: 3s;
+    border-radius: 50px;
+}
+#start:hover{
+    background-color: rgb(37, 184, 37);
+    transition: all 0.5s ease-in-out;
+}
+
+@keyframes test {
+    from {opacity: 0;}
+    to {opacity:1;}
+}
+#gameover{
+    display: none;
+    font-size:20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+    width: 400px;
+    padding:10px;
+    background-color: lightpink;
+    position: absolute;
+   left:10%;
+   right: 0;
+   top:50%;
+    
+}
+
+#tryagain{
+    width:100px;
+    height: 30px;
+    background-color: orangered;
+    color:#FFF;
+    border:none;
+    font-weight: bold;
+    font-size: 15px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+}
+
+#tryagain:hover{
+    background-color: rgb(144, 174, 238);
+    transition: all 0.5s ease-in-out;
+}
+
+button:focus{
+    border:none;
+}
+
+#sun{
+    position:absolute;
+    top:8%;
+    right:38%;
+    left: 38%;
+    width: 25%;
+    height: 25%;
+    display: none;
+}
+
+#forest{
+    position: absolute;
+    top:0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: none;
+}
+
+
+
+@media screen and (max-width:700px){
+    body{
+        background-color:lightpink;
+        padding:0;
+        margin:0;
+    }
+    .game-container{
+        width: 100%;
+        height: 100%;
+    }
+
+    canvas{
+        width: 100%;
+        z-index: 1;
+    }
+
+    .Time{
+        width:300px;
+        left:20px;
+    }
+
+    #yes,#close{
+        left:35px;
+    }
+
+    #up,#left,#down,#right{
+        margin:10px;
+        width: 100px;
+        height: 80px;
+        background-color:brown;
+        color:#FFF;
+        border:none;
+        cursor:pointer;
+        font-size:20px;
+        font-weight: bold;
+        transition: all 0.3s ease-in-out;
+    }
+    #up:hover,#left:hover,#down:hover,#right:hover{
+        background-color: darkgreen;
+        transition: all 0.3s ease-in-out;
+    }
+
+    #counter{
+        left: 40%;
+        right:40%;
+        top:-2%;
+        font-size:15px;
+        text-align: center;
+    }
+
+    .game-container #new{
+        left:25%;
+    }
+    #arrows{
+        position: absolute;
+        top:330px;
+        width:100%;
+    }
+    #gameover{
+        width: 300px;
+        position: absolute;
+        left: 10%;
+        right: 10%;
+        top:40%;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <img src="bear1.jpg" id="bear" style="display: none;">
+    <img src="carot.png" id="carot" style="display: none;">
+    <img src="knife.png" id= 'knife' style="display: none;">
+    
+    
+    
+    <div class='game-container'>
+        <canvas id ="canvas" width="600px" height="500px"></canvas>
+        <div class="Time" id='time'>
+            <p style="text-align: center;">Time is over. Do you want to start a new game?</p>
+            <button id='yes'>Yes</button>
+            <button id='close'>Close</button>
+        </div>
+        <p id='counter'></p>
+        <button id='start'>Start a new game</button>
+        <button id="new">Start the game</button>
+
+        <div id='gameover'>
+            <p>GameOver. Good luck next Time.</p>
+            <button id='tryagain'>Try Again</button>
+        </div>
+
+        <img src="sun.gif" alt="moving sun" id = 'sun'>
+
+        
+
+       
+
+    </div>
+
+    <div align="center" id='arrows'>
+        <button id="up" ></button><br />
+        <button id="left" ></button>
+        <button id="down" ></button>
+        <button id="right"></button>
+       
+    </div>
+
+    
+    
+<script src="game.js">
+   
+</script>
+    
+
+</body>
+
+
+
+
+
+
+</html>
